@@ -1,37 +1,36 @@
 import { CardStyleInterpolators, createStackNavigator, HeaderStyleInterpolators, TransitionPresets, TransitionSpecs } from '@react-navigation/stack';
-import Home from '../screen/Home/Home';
-import Skill from '../screen/Skill/Skill';
-import { Easing } from 'react-native';
+import Home from '../screens/Home/Home';
+import Skill from '../screens/Skill/Skill';
 
 const {Navigator, Screen} = createStackNavigator();
 
 export default function MyStack() {
-    const animation ={
+    const animation = {
         animation: 'spring',
         config: {
-            stiffness: 1000,
-            damping: 500,
-            mass: 3,
+            stiffness: 300,
+            damping: 1000,
+            mass: 8,
             overshootClamping: true,
-            restDisplacementThreshold: 0.01,
-            restSpeedThreshold: 0.01,
-        },
-    }
-    const animation2 ={
-        animation: 'timing',
-        config: {
-            duration: 100,
-            easing: 100,
+            restDisplacementThreshold: 10,
+            restSpeedThreshold: 5,
         },
     }
 
     return (
-        <Navigator>
+        <Navigator
+            screenOptions={{
+                headerTintColor: '#fff',
+                headerStyle:{backgroundColor: '#3f465a'},
+            }}
+        >
             <Screen
                 name="Home"
                 component={Home}
                 options={{
                     title:'Perfil',
+                    // headerShown: false,
+                    // headerTransparent: true,
                 }}
             />
             <Screen
@@ -39,10 +38,17 @@ export default function MyStack() {
                 component={Skill}
                 options={{
                     title:'Soft Skill\'s',
-                    // gestureDirection: 'horizontal-inverted',
-                    // headerStyleInterpolator: HeaderStyleInterpolators.forUIKit,
-                    // cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-                    ...TransitionPresets.ModalSlideFromBottomIOS,
+                    gestureDirection: 'horizontal',
+                    gestureEnabled: true,
+                    transitionSpec: {
+                        open: animation,
+                        close: animation,
+                    },
+                    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+                    headerStyleInterpolator: HeaderStyleInterpolators.forFade,
+                    // ...TransitionPresets.SlideFromRightIOS,
+                    // presentation: 'transparentModal',
+                    // headerShown: false,
                 }}
             />
         </Navigator>
