@@ -5,6 +5,16 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     alignContent: 'center',
-    backgroundColor: '#fff000ed',
-  }
+    backgroundColor: '#5b637b',
+  },
+  scrollView: {
+    width: '97%',
+  },
+  text:{
+    color: '#fff',
+    marginBottom: 10,
+  },
+  link: {
+    color: '#bfb8ff',
+  },
 });
