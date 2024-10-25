@@ -12,10 +12,8 @@ export default function Home({ navigation }) {
   <View style={styles.container}>
     <ScrollView style={styles.scrollContainer}>
       <UserHighlight userName='Airan Rocha' imageSource={require('../../../assets/perfil.jpg')} />
-      <Text>Olá</Text>
-      <Button title='Skills' onPress={()=> navigation.navigate('Skill')} />
       <SocialButtons />
-
+      <Button title='Skills' onPress={()=> navigation.navigate('Skill')} />
       <Text style={{marginTop:20}}>{texto}</Text>
       <Text>{texto}</Text>
       <Text>{texto}</Text>

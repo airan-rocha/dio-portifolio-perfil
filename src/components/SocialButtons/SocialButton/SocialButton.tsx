@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, GestureResponderEvent } from 'react-native';
-import IconFontAwesome5 from '@expo/vector-icons/FontAwesome5'
+import IconFontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 import { styles } from './SocialButtonStyles';
 
