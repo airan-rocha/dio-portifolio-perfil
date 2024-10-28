@@ -9,9 +9,9 @@ export function SocialButtons() {
       <Text style={styles.text} >Siga-me: </Text>
       <View style={styles.container}>
           <SocialButton title='GitHub' iconFontAwesome5Name='github-square' onPress={() => Linking.openURL('https://github.com/airan-rocha/dio-portifolio-perfil')} />
-          <SocialButton title='Linkedin' iconFontAwesome5Name='linkedin' onPress={() => console.log('button press')} />
-          <SocialButton title='Facebook' iconFontAwesome5Name='facebook-square' onPress={() => console.log('button press')} />
-          <SocialButton title='Instagram' iconFontAwesome5Name='instagram-square' onPress={() => console.log('button press')} />
+          <SocialButton title='Linkedin' iconFontAwesome5Name='linkedin' onPress={() => Linking.openURL('https://br.linkedin.com/in/airan-rocha')} />
+          <SocialButton title='Facebook' iconFontAwesome5Name='facebook-square' onPress={() => Linking.openURL('https://www.facebook.com/airansp')} />
+          <SocialButton title='Instagram' iconFontAwesome5Name='instagram-square' onPress={() => Linking.openURL('https://www.instagram.com/rocha_airan/')} />
       </View>
     </>
   );
