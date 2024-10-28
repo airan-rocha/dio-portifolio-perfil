@@ -8,12 +8,12 @@ import { ScrollView } from 'react-native-gesture-handler';
 export default function Skill({ navigation }) {
 
   function saibaMaisClassificacao(){
-    Alert.alert('Classificação ⭐️', 'a classificação por estrelas vão de 1 (não desenvolvido) a 7 (totalmente desenvolvido). A classificação a partir de 4 estrelas indica que a habilidade está em desenvolvimento. Classificações mais baixas indicam em qual área a pessoa deve se dicar mais ao desenvolvimento.')
+    Alert.alert('Classificação ⭐️', "A classificação por estrela vão de 1 (não desenvolvido) a 7 (totalmente desenvolvido). A classificação a partir de 4 estrelas indica que a habilidade está em desenvolvimento. Classificações mais baixas indicam em qual área a pessoa deve se dedicar mais ao desenvolvimento.")
   }
 
   return (
     <View style={styles.container}>
-        <Text style={styles.text}>Abaixo são apresentados as habilidades comportamentas e interpessoais que se referem à forma como a pessoa se relaciona com os outros e consigo mesmo. <Text onPress={saibaMaisClassificacao} style={styles.link}>Entenda a classificação</Text></Text>
+        <Text style={styles.text}>Abaixo são apresentados as habilidades comportamentais e interpessoais que se referem à forma como a pessoa se relaciona com os outros e consigo mesmo. <Text onPress={saibaMaisClassificacao} style={styles.link}>Entenda a classificação</Text></Text>
 
         <ScrollView  style={styles.scrollView}>
           <SkillsCp />
